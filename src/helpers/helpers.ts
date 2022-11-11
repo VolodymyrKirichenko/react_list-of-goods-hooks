@@ -1,4 +1,4 @@
-import { ReorderOptions, SortType } from '../app.typedefs';
+import { ReorderOptions, SortType } from '../components/App/app.typedefs';
 
 export const getReorderedGoods = (
   goods: string[],
@@ -20,4 +20,4 @@ export const getReorderedGoods = (
   return isReversed
     ? visibleGoods.reverse()
     : visibleGoods;
-}
+};
