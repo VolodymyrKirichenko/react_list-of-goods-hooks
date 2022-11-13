@@ -42,8 +42,9 @@ export const App: React.FC = () => {
 
         <Button
           className={
-            cn('button is-success',
-              { 'is-light': sortType !== SortType.LENGTH })
+            cn('is-success', {
+              'is-light': sortType !== SortType.LENGTH,
+            })
           }
           onClick={() => setSortType(SortType.LENGTH)}
         >
@@ -51,8 +52,11 @@ export const App: React.FC = () => {
         </Button>
 
         <Button
-          className={cn('button is-warning',
-            { 'is-light': !isReversed })}
+          className={
+            cn('is-warning', {
+              'is-light': !isReversed,
+            })
+          }
           onClick={reverseHandler}
         >
           Reverse
@@ -60,7 +64,7 @@ export const App: React.FC = () => {
 
         {(sortType || isReversed) && (
           <Button
-            className="button is-danger is-light"
+            className="is-danger is-light"
             onClick={resetHandler}
           >
             Reset
